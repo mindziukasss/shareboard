@@ -3,7 +3,11 @@ class ShareModel extends Model{
   public function Index(){
     $this->query('SELECT * FROM shares ORDER BY create_date DESC');
     $rows = $this->resultSet();
-    return $rows ;
+
+    foreach ($rows as &$row){
+        $row['user_id'] = $this->convertUserIDtoName($row['user_id']);
+      }
+      return $rows;
   }
 
   public function add(){
@@ -30,4 +34,15 @@ class ShareModel extends Model{
 
     return;
   }
+
+  public function convertUserIDtoName($userID){
+        $name = "";
+        $this->query('SELECT name FROM users WHERE id = :user_id LIMIT 1');
+        $this->bind(':user_id', $userID );
+        $row = $this->single();
+        if($row){
+          $name = $row['name'];
+        }
+        return $name;
+    }
 }

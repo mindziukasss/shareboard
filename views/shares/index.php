@@ -4,7 +4,7 @@
   <?php endif; ?>
   <?php foreach ($viewmodel as $item) : ?>
     <div class="well">
-      <h3><?php echo $item['title']; ?></h3>
+      <h3><?php echo $item['title']; ?> by <span style="text-decoration: underline"><?php echo $item['user_id'] ?></span></h3>
       <small><?php echo $item['create_date']; ?></small>
       <hr/>
       <p class="id"><?php echo $item['body']; ?></p>
