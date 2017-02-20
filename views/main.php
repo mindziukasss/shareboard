@@ -2,8 +2,9 @@
 <html>
 <head>
   <title>Shareboard</title>
+  <!-- <meta charset="UTF-8"> -->
+  <link rel="stylesheet" href="<?php echo ROOT_URL; ?>assets/css/bootstrap.css">
   <link rel="stylesheet" href="assets/css/style.css" media="all" type="text/css">
-  <link rel="stylesheet" href="assets/css/bootstrap.css">
 
 </head>
 <body>
@@ -22,6 +23,7 @@
         <ul class="nav navbar-nav">
           <li><a href="<?php echo ROOT_URL; ?>">Home</a></li>
           <li><a href="<?php echo ROOT_URL; ?>shares">Shares</a></li>
+          
         </ul>
         <ul class="nav navbar-nav navbar-right">
           <li><a href="<?php echo ROOT_URL; ?>users/login">Login</a></li>
