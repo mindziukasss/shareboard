@@ -17,7 +17,7 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="#">Shareboard</a>
+        <a class="navbar-brand" href="<?php echo ROOT_URL; ?>">Shareboard</a>
       </div>
       <div id="navbar" class="collapse navbar-collapse">
         <ul class="nav navbar-nav">
@@ -39,6 +39,7 @@
   </nav>
 
   <div class="container">
+    <?php Messages::display(); ?>
     <div class="row">
       <?php require($view); ?>
     </div>
