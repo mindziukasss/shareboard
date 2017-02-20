@@ -16,7 +16,7 @@
         <label>Link</label>
         <input type="text" name="link" class="form-control"/>
       </div>
-      <input class="btn btn-priamry" name="submit" type="submit" value="Submit" />
+      <input class="btn btn-primary" name="submit" type="submit" value="Submit" />
       <a class="btn btn-danger" href="<?php echo ROOT_PATH; ?>shareboard/shares">Cancel</a>
     </form>
   </div>
